@@ -81,10 +81,26 @@ bool Updater::processOne(const Rate& e)
         loader=new QNetworkAccessManager(this);
         connect(loader,SIGNAL(finished(QNetworkReply*)),SLOT(endWork(QNetworkReply*)));
     }
-    loader->get(QNetworkRequest(it->siteUrl()));
+    auto reply=loader->get(QNetworkRequest(it->siteUrl()));
+    QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), SLOT(sslError(QList<QSslError>)));
     //ErrorManagement::checkNetworkAccess(loader,"Network Connection",UpdateError::huge);
-
     return true;
+}
+
+void Updater::sslError(QList<QSslError> erl)//easy procesing-just ignoring(and in debug mode printing into console)
+{
+#ifndef NDEBUG
+#ifdef HTML_CODE
+    qDebug()<<"\n\n\n\n\nSsl Errors:\n";
+    for (int i=0;i<erl.size();++i)
+    {
+        qDebug()<<erl[i].errorString();
+    }
+    qDebug()<<"\n\n"<<flush;
+#endif
+#endif
+      QNetworkReply *reply = qobject_cast<QNetworkReply *>(sender());
+      reply->ignoreSslErrors();
 }
 
 void Updater::endWork(QNetworkReply* r)
