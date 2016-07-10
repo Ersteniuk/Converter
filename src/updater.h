@@ -13,6 +13,7 @@ class QNetworkAccessManager;
 class QNetworkReply;
 class QNetworkRequest;
 class  AbstractExtractor;
+class QSslError;
 
 class Updater : public AbstractUpdater
 {
@@ -39,6 +40,7 @@ protected:
 
 protected slots:
     virtual void endWork(QNetworkReply* r);
+    void sslError(QList<QSslError>);//easy procesing-just ignoring(and in debug mode printing into console)
 };
 
 #endif // UPDATER_H
