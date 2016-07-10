@@ -1,0 +1,18 @@
+{
+USD
+splitter=,	
+buy[1]=<strong class=\"buy-USD\" data-buy=\"(\d+,?\d*)\">\d+,?\d*</strong>
+sell[1]=<strong class=\"sell-USD\" data-sell=\"(\d+,?\d*)\">\d+,?\d*</strong>
+}
+{
+EUR
+splitter=,	
+buy[1]=<strong class=\"buy-EUR\" data-buy=\"(\d+,?\d*)\">\d+,?\d*</strong>
+sell[1]=<strong class=\"sell-EUR\" data-sell=\"(\d+,?\d*)\">\d+,?\d*</strong>
+}
+{
+RUR
+splitter=,	
+buy[1]=<strong class=\"buy-RUB\" data-buy=\"(\d+,?\d*)\">\d+,?\d*</strong>
+sell[1]=<strong class=\"sell-RUB\" data-sell=\"(\d+,?\d*)\">\d+,?\d*</strong>
+}

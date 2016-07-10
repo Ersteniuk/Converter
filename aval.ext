@@ -1,0 +1,18 @@
+{
+USD
+splitter=.
+buy[1]=<tr><td class="name">USD</td><td class="right">(\d+.?\d*)</td><td class="right">(\d+.?\d*)</td></tr>
+sell[2]
+}
+{
+EUR
+splitter=.
+buy[1]=<tr><td class="name">Euro</td><td class="right">(\d+.?\d*)</td><td class="right">(\d+.?\d*)</td></tr>
+sell[2]
+}
+{
+RUR
+splitter=.
+buy[1]=<tr><td class="name">RUR</td><td class="right">(\d+.?\d*)</td><td class="right">(\d+.?\d*)</td></tr>
+sell[2]
+}

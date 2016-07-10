@@ -1,0 +1,18 @@
+{
+USD
+splitter=,
+buy[1]=<tr><td>USD</td><td>Долари США</td><td class="digits">(\d+,?\d*)</td><td class="digits">(\d+,?\d*)</td>
+sell[2]
+}
+{
+EUR
+splitter=,
+buy[1]=<tr><td>EUR</td><td>Євро</td><td class="digits">(\d+,?\d*)</td><td class="digits">(\d+,?\d*)</td>
+sell[2]
+}
+{
+RUR
+splitter=,
+buy[1]=<tr><td>RUB</td><td>Росiйські рублі</td><td class="digits">(\d+,?\d*)</td><td class="digits">(\d+,?\d*)</td>
+sell[2]
+}
