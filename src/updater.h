@@ -9,11 +9,11 @@
 #include "exchangerate.h"
 #include <qtextstream.h>
 #include "bankinfo.h"
+#include <QSslError>
 class QNetworkAccessManager;
 class QNetworkReply;
 class QNetworkRequest;
 class  AbstractExtractor;
-class QSslError;
 
 class Updater : public AbstractUpdater
 {
