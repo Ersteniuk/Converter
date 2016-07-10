@@ -8,7 +8,7 @@ oschadbank.ext
 {
 pib
 regex
-http://www.pib.com.ua/
+https://www.pib.ua/
 pib.ext
 }
 

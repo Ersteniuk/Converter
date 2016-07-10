@@ -9,6 +9,7 @@
 #include "exchangerate.h"
 #include <qtextstream.h>
 #include "bankinfo.h"
+#include <QSslError>
 class QNetworkAccessManager;
 class QNetworkReply;
 class QNetworkRequest;
@@ -39,6 +40,7 @@ protected:
 
 protected slots:
     virtual void endWork(QNetworkReply* r);
+    void sslError(QList<QSslError>);//easy procesing-just ignoring(and in debug mode printing into console)
 };
 
 #endif // UPDATER_H
